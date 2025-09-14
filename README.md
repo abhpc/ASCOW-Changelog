@@ -41,20 +41,21 @@ docker compose up -d
 # 3 更新日志(按日期倒序排列)
 ## 20250914
 - 新增计算资源统计板块，可统计不同module核时情况：
+  
 <img width="600" alt="image" src="https://github.com/user-attachments/assets/9a8b0f5f-f627-42f2-847c-49869d0f42f2" />
 
-## 2025-09-10
+## 20250910
 - 限制前后缀为`slm.*`、`*.slm`、`*.sh`、`*.bash`、`*.slurm`、`slurm.*`六种文件可提交，其他文件不可提交。
 
-## 2025-09-09
+## 20250909
 - 新增已完成作业应用模块的csv导出功能，以统计不同软件模块的机时占比。
 
-## 2025-09-06
+## 20250906
 - 保存用户作业调取`Environment Module`记录，便于后期做软件使用分析。如用户主节点未配置`Environment Module`记录器，则记录值为`unknown`。需要配合最新的[**abhpc-scow-slurm-adapter**](https://github.com/abhpc/abhpc-scow-slurm-adapter)使用，参见[效果图](https://github.com/abhpc/abhpc-scow-slurm-adapter/blob/main/image/README/1757250643455.png)：
 
 <img width="1200" src="https://raw.githubusercontent.com/abhpc/abhpc-scow-slurm-adapter/main/image/README/1757250643455.png" alt="Image Description" />
 
-## 2025-09-01
+## 20250901
 - ND和SAND版本合并到通用版本中来。其中，单点登录在`auth.yml`文件中新增以下字段实现单点登录：
 ```yml
 singleSession: on  # on为开通单点登录，off为关闭单点登录
@@ -73,11 +74,11 @@ file:
 ```
 
 
-## 2025-08-29
+## 20250829
 - 忽略`config/apps/*.yml`的错误配置，避免某个交互式应用配置出错时，整个集群报500错误。
 - 新增交互式应用的图标大小调整。
 
-## 2025-08-27
+## 20250827
 - 在交互式应用的`yml`文件(`config/apps/*.yml`)中增加`visible`字段，使交互式应用可设置为公开或部分账户、用户可见。
 ```yml
 visible:
@@ -85,7 +86,7 @@ visible:
   allow_accounts: caep,mechx   # 如果public为no，allow_accounts中账户下的所有用户可见APP
   allow_users: user1,uesr2     # 如果public为no，allow_users中的用户可见APP
 ```
-## 2025-08-26
+## 20250826
 - 增加了Portal的pm2并发性能，解决交互式应用在线用户数大于20时系统崩溃的问题。
 - 修改文件和文件夹的图标，以方便区分文件夹和文件。
 - 文件选择器默认路径设置为用户家目录，而不是根目录/。
