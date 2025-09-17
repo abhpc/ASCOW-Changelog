@@ -40,7 +40,7 @@ docker compose up -d
 
 # 3 更新日志(按日期倒序排列)
 ## 20250917
-- 优化`portal-web`、`portal-server`、`mis-server`和`mis-web`四个模块的并发度，全部采用`pm2`来实现高并发度。
+- 优化`portal-web`和`portal-server`的并发度，全部采用`pm2 cluster`来实现高并发度。
 ## 20250916
 - 修改最大导出条目为50000条(原来设计为10000条)
 - 应用图标大小默认修改为小
