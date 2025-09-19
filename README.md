@@ -41,6 +41,7 @@ docker compose up -d
 # 3 更新日志(按日期倒序排列)
 ## 20250919
 - 新增图表统计，可导出数据做详细分析。
+  
   <img width="1200" alt="image" src="https://github.com/user-attachments/assets/37d19120-ee8e-486d-b6b6-4267d57beece" />
 
 - 优化`portal-web`的并发度，实现基于`pm2`的`Nginx`负载均衡。
