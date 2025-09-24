@@ -39,6 +39,12 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20250924
+- 修正了不正确显示用户登录IP的Bug。
+- 优化了应用同步页面，如下所示：
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/853dcc08-db16-46fe-9939-0d90c46c8db2" />
+
+
 ## 20250923
 - 优化应用加载页面在APP数量较多时载入缓慢的问题，采用`redis`缓存机制。
 
