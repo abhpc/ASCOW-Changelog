@@ -39,8 +39,17 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
-## 20251024
-- 增加用户单位信息
+## 20251027
+- 增加用户单位信息，需要在`auth.yml`中添加单位信息：
+```yml
+  ldap:
+  attrs:
+    uid: uid
+    name: cn
+    mail: mail
+    affiliation: description #新加的
+```
+- 修正了修改文件时，改变文件权限的Bug
 ## 20251020
 - 修复导入用户管理界面显示姓名为`userID`的问题，正常应显示为LDAP中的中文名。
 ## 20251011
