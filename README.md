@@ -41,7 +41,7 @@ docker compose up -d
 # 3 更新日志(按日期倒序排列)
 ## 20251105
 - 在`文件目录选择框`中新增`上传文件`和`新文件`按钮：
-<img width="600" alt="image" src="https://github.com/user-attachments/assets/c645602e-3dfd-4bc3-b197-8f86472c26d7" />
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/c645602e-3dfd-4bc3-b197-8f86472c26d7" />
 
 ## 20251101
 - 优化`账户列表`显示
