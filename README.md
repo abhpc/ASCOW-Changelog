@@ -39,6 +39,12 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20251114
+- 优化`作业->提交作业`页面布局，新增保存为模板前的命名：
+
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/a7969c72-52e7-43e7-b5d3-ca0e9104c971" />
+
+
 ## 20251110
 - 调整了`作业—>提交作业`页面的布局。
 ## 20251109
