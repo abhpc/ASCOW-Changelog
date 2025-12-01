@@ -42,8 +42,8 @@ docker compose up -d
 ## 20251201
 - 去掉夜间模式。
 - 在`mis.yml`中修正错误提示：
-  ```yml
-  createUser:
+```yml
+createUser:
   builtin:
     userIdPattern:
       regex: "^[a-z][a-z0-9_]{2,39}$"
@@ -52,7 +52,7 @@ docker compose up -d
           default: "用户名只能包含小写字母、数字和下划线，且必须以小写字母开头"
           zh_cn: "用户名只能包含小写字母、数字和下划线，且必须以小写字母开头"
           en: "Username can only contain lowercase letters, numbers and underscores, and must start with a lowercase letter"
-  ```
+```
 
 ## 20251114
 - 优化`作业->提交作业`页面布局，新增保存为模板前的命名：
