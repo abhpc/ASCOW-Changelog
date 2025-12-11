@@ -39,6 +39,11 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20251211
+- 应用：增加`最长运行时间`单位`小时`和`天`。
+
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/21974b1f-31da-439a-9682-6f1b9faa8e5a" />
+
 ## 20251210
 - 修复bug：文件选择器选择中间位置，前面会丢失反斜杠。
 ## 20251201
