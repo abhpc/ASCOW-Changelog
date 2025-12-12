@@ -39,6 +39,17 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20251212
+- 在`应用`的`yml`文件(`config/apps/*.yml`)的`visible`字段增加`ban_accounts`和`ban_users`字段：
+```yml
+visible:
+  public: no                   # 如果public值为yes，则所有用户可见
+  allow_accounts: caep,mechx   # 如果public为no，allow_accounts中账户下的所有用户可见APP
+  allow_users: user1,uesr2     # 如果public为no，allow_users中的用户可见APP
+  ban_accounts: xxx1,xxx2      # 如果public为yes，ban_accounts中账户下的所有用户不可见APP
+  ban_users: xxx1,xxx2         # 如果public为yes，ban_users中的用户不可见APP
+```
+
 ## 20251211
 - 应用：增加`最长运行时间`单位`小时`和`天`。
 
