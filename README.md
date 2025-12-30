@@ -39,6 +39,11 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20251230
+- 修改平台和语言切换的显示模式：
+  
+  <img width="200" alt="image" src="https://github.com/user-attachments/assets/378676cf-80dc-4216-9b60-67e457677e20" />
+
 ## 20251212
 - 在`应用`的`yml`文件(`config/apps/*.yml`)的`visible`字段增加`ban_accounts`和`ban_users`字段：
 ```yml
