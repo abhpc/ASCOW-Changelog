@@ -40,7 +40,7 @@ docker compose up -d
 
 # 3 更新日志(按日期倒序排列)
 ## 20260109
-- [Pro]文件管理器地址栏新增`最近的作业目录`选项：
+- [Pro]文件管理器地址栏新增`最近的作业目录`选项（**需要同步更新adapter**）：
   
   <img width="1200" alt="image" src="https://github.com/user-attachments/assets/1ce370a3-1184-4e31-a81e-465a0a6d60bb" />
   
