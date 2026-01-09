@@ -39,6 +39,11 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20260109
+- [Pro]文件管理器地址栏新增`最近的工作目录`选项：
+  
+  <img width="1200" alt="image" src="https://github.com/user-attachments/assets/1ce370a3-1184-4e31-a81e-465a0a6d60bb" />
+  
 ## 20251230
 - 修改平台和语言切换的显示模式：
   
