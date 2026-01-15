@@ -39,6 +39,11 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20260115
+- [Pro]通过设置用户目录白名单，修复任意文件读取漏洞，避免用户选择任意文件点击下载，拼接`../../../etc/passwd`，便能读取到`passwd`。
+  
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/3c9c441c-6af0-47af-a617-cc3a2d388c1e" />
+
 ## 20260110
 - 增加版本号；
 - 修改系统默认logo。
