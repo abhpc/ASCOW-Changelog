@@ -39,6 +39,11 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20260121
+- 仪表盘显示CPU、GPU和节点数情况：
+<img width="1200" alt="image" src="https://github.com/user-attachments/assets/5bf0f7a1-7d0f-4e99-a857-cb74e50f4ba6" />
+
+
 ## 20260115
 - [Pro]通过设置用户目录白名单，修复任意文件读取漏洞，避免用户选择任意文件点击下载，拼接`../../../etc/passwd`，便能读取到`passwd`。
   
