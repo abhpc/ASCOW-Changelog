@@ -9,7 +9,7 @@
 > 本系统推荐使用[**ASCOW-slurm适配器**](https://github.com/abhpc/abhpc-scow-slurm-adapter)，可避免交互式作业中文乱码和GPU资源分配等问题，还可实现基于`Environment Module`的模块调用统计。
 
 ## 1.2 技术合作和研讨
-本项目欢迎任意形式的技术合作和研讨，可联系四室主任刘晓毅(邮件：[xyliu#mechx.ac.cn](mailto:xyliu@mechx.ac.cn))和计算组组长徐云飞博士(邮件：[yfxu#mechx.ac.cn](mailto:yfxu@mechx.ac.cn))。
+本项目欢迎任意形式的技术合作和研讨，可联系四室主任刘晓毅(邮件：[xyliu#mechx.ac.cn](mailto:xyliu@mechx.ac.cn))和陈洁高级工程师(邮件：[jchen#mechx.ac.cn](mailto:jchen@mechx.ac.cn))。
 
 # 2 版本说明和使用方法
 
