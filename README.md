@@ -88,6 +88,27 @@ docker compose up -d
 ## 20260910
 - [bug修复]slurm18下，节点属于多分区时，cpu数、gpu数错误
 
+## 20260907
+- [功能优化]支持下次登录强制修改密码
+- [功能优化]ascow-cli更新，支持2FA密钥种子配置，参考install.yaml配置：
+```yaml
+mis:
+  # 必填：请设置至少32字符的高强度随机种子，部署后不可修改
+  configEncryptSeed: ""
+
+gateway:
+  # https协议参考配置
+  protocol: https
+  https:
+    enabled: true
+    port: 443
+    certPath: ./ssl/fullchain.pem
+    keyPath: ./ssl/privkey.pem
+    redirectHttpToHttps: false
+    hsts: false
+  proxyReadTimeout: 36000s
+```
+
 ## 20260818
 - [功能优化]显示上传进度与速度
 - [功能优化]支持作业计费精度热生效
@@ -126,11 +147,20 @@ docker compose up -d
 - [安全]允许用户信任设备（信任设备不再要求2FA认证），用户查看信任设备列表并删除信任设备。
 - [安全]登录安全增强-2FA+图片验证码+登录限制
 
-  **注意**：启用2FA时，要修改docker-compose.yml，增加mis-server:environment:MIS_CONFIG_ENCRYPT_KEY=请替换为固定的高强度随机字符串
-- [安全]运行httos协议
+  **注意**：启用2FA时，要修改docker-compose.yml，增加mis-server:environment:MIS_CONFIG_ENCRYPT_KEY=请替换为固定的高强度随机字符串，
+  ```yaml
+  mis-server:
+    environment:
+    - MIS_CONFIG_ENCRYPT_KEY=请替换为固定的高强度随机字符
+
+  auth:
+    environment:
+    - MIS_SERVER_URL=mis-server:5000
+  ```
+- [安全]运行https协议
 
   **注意**：需要配置docker-compose.yml
-  ```
+  ```yaml
   gateway:
     restart: always
     environment:
