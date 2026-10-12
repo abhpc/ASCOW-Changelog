@@ -39,6 +39,55 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20261012
+ - [安全]修复运行中作业越权查看（getRunningJobs）
+ - [安全]修复应用列表和应用元数据越权查看（listAvailableApps、getAppMetadata）
+ - [安全]修复服务器端文件枚举（fileExist）
+ - [安全]checkConnectivity检测端口开发修复
+ - [安全]/api/proxy/<cluster>/relative/<IP>/<port>/<rest>检测端口修复，需配置portal-server，若未配置，应用连接时会失败。
+   ``` yml
+  services:
+    portal-server:
+      environment:
+        PROXY_SCONTROL_PATH: /opt/slurm/bin/scontrol ## 在管理节点通过which scontrol获取
+        PROXY_GATEWAY_AUTH_PRL: # 独立代理网关转发前，向Portal Web发起授权校验的地址（未启用proxyGateway时，无需填写）
+        PROXY_GATEWAY_TRUSTED_WEB_IPS: # 独立代理网关允许接入的 PortalWeb来源IPv4地址或网段，多个值用逗号分隔（未启用proxyGateway时，无需填写）
+   ```
+
+## 20261009
+ - [bug修复]初始化页面进不去
+
+## 20260929
+- [功能优化]超算平台-下载申请位置和显示优化
+
+## 20260928
+- [功能优化]下载审批记录筛选和导出
+- [bug修复]登录页面logo未读取
+
+## 20260923
+- [功能优化]下载审批：需（在msr上）安装xxhash（dnf install xxhash，xxhsum --version），配置文件添加mis-server的环境变量PORTAL_SERVER_URL=portal-server:5000
+- [安全]作业查看越权
+
+## 20260917
+- [功能优化]增加邮件合并队列与发送限速
+- [bug修复]忘记密码跳转
+- [bug修复]邮箱验证登录回跳
+
+## 20260916
+- [bug修复]上一版本安全功能导致的shell ssh连接不上
+
+## 20260915
+- [安全]收紧未登录页面路由访问
+- [安全]统一未登录API访问拦截
+
+## 20260911
+- [bug修复]分区gpu数显示错误，平台管理-集群管理节点数、cpu数、gpu数显示错误
+- [bug修复]MFA单点登录顶号失败、显示配置
+- [安全]下载文件链接没失效
+
+## 20260910
+- [bug修复]slurm18下，节点属于多分区时，cpu数、gpu数错误
+
 ## 20260818
 - [功能优化]显示上传进度与速度
 - [功能优化]支持作业计费精度热生效
