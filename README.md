@@ -39,6 +39,9 @@ docker compose up -d
 ```
 
 # 3 更新日志(按日期倒序排列)
+## 20261027
+ - [bug修复]允许禁止下载的用户在线预览文件
+
 ## 20261012
  - [安全]修复运行中作业越权查看（getRunningJobs）
  - [安全]修复应用列表和应用元数据越权查看（listAvailableApps、getAppMetadata）
