@@ -42,18 +42,27 @@ docker compose up -d
 ## 20261027
  - [bug修复]允许禁止下载的用户在线预览文件
 
-## 20261012
+## 20261023
+ - [bug修复]未配置SMTP时修改邮箱保持未验证状态
+ - [bug修复]修复强制改密密码策略请求被网关拦截
+ - [bug修复]Portal启动无法初始化集群时自动重启
+
+## 20261020
+ - [安全]修复mkdir与createFile文件遍历问题
+ - [bug修复]封锁判断遵循账户有效阈值
+ - [功能优化]在线设置用户名和密码规则
+
+## 20261013
  - [安全]修复运行中作业越权查看（getRunningJobs）
  - [安全]修复应用列表和应用元数据越权查看（listAvailableApps、getAppMetadata）
  - [安全]修复服务器端文件枚举（fileExist）
  - [安全]checkConnectivity检测端口开发修复
- - [安全]/api/proxy/<cluster>/relative/<IP>/<port>/<rest>检测端口修复，需配置portal-server，若未配置，应用连接时会失败。
+ - [安全]/api/proxy/<cluster>/relative/<IP>/<port>/<rest>检测端口修复，启用proxyGateway时需配置portal-server。**更新了adapter。**
    ``` yml
   services:
     portal-server:
       environment:
-        PROXY_SCONTROL_PATH: /opt/slurm/bin/scontrol ## 在管理节点通过which scontrol获取
-        PROXY_GATEWAY_AUTH_PRL: # 独立代理网关转发前，向Portal Web发起授权校验的地址（未启用proxyGateway时，无需填写）
+        PROXY_GATEWAY_AUTH_URL: # 独立代理网关转发前，向Portal Web发起授权校验的地址（未启用proxyGateway时，无需填写）
         PROXY_GATEWAY_TRUSTED_WEB_IPS: # 独立代理网关允许接入的 PortalWeb来源IPv4地址或网段，多个值用逗号分隔（未启用proxyGateway时，无需填写）
    ```
 
