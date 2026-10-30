@@ -57,14 +57,14 @@ docker compose up -d
  - [安全]修复应用列表和应用元数据越权查看（listAvailableApps、getAppMetadata）
  - [安全]修复服务器端文件枚举（fileExist）
  - [安全]checkConnectivity检测端口开发修复
- - [安全]/api/proxy/<cluster>/relative/<IP>/<port>/<rest>检测端口修复，启用proxyGateway时需配置portal-server。**更新了adapter。**
-   ``` yml
+ - [安全]`/api/proxy/<cluster>/relative/<IP>/<port>/<rest>`检测端口修复，启用proxyGateway时需配置portal-server。**更新了adapter。**
+  ```yml
   services:
     portal-server:
       environment:
         PROXY_GATEWAY_AUTH_URL: # 独立代理网关转发前，向Portal Web发起授权校验的地址（未启用proxyGateway时，无需填写）
         PROXY_GATEWAY_TRUSTED_WEB_IPS: # 独立代理网关允许接入的 PortalWeb来源IPv4地址或网段，多个值用逗号分隔（未启用proxyGateway时，无需填写）
-   ```
+  ```
 
 ## 20261009
  - [bug修复]初始化页面进不去
